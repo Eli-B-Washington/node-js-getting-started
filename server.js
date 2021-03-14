@@ -13,7 +13,7 @@ pool.query(sql, function(err, res) {
     // If an error occurred...
     if (err) {
         console.log("Error in query: ")
-        console.log(err);
+        //console.log(err);
     }
 
     // Log this to the console for debugging purposes.
