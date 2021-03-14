@@ -18,7 +18,7 @@ pool.query(sql, function(err, res) {
 
     // Log this to the console for debugging purposes.
     console.log("Back from DB with result:");
-    console.log(res.rows);
+    //console.log(res.rows);
 }); 
 
 // views is directory for all template files
