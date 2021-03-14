@@ -1,0 +1,7 @@
+CREATE TABLE updates(
+id SERIAL NOT NULL PRIMARY KEY,
+date VARCHAR(100) NOT NULL UNIQUE,
+note VARCHAR(500) NOT NULL
+)
+
+INSERT INTO updates (date, note) VALUES ('03/13/2021', 'New Update');

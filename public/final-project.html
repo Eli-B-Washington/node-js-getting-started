@@ -16,7 +16,7 @@
 
         <h2>The Returned Object</h2>
         
-        <button type="button" onclick="loadDoc('/getInfo', myFunction)">Change Content
+        <button type="button" onclick="loadDoc('handlegetInfo', myFunction)">Change Content
         </button>
         </div>
 
@@ -35,10 +35,11 @@
           xhttp.send();
         }
         function myFunction(xhttp) {
-          console.log("parsing something");
           var obj = JSON.parse(xhttp.responseText);
+          var completed = JSON.stringify(obj);
+          console.log(obj);
           document.getElementById("demo").innerHTML =
-          obj;
+          obj[0].note;
         }
         </script>
 </body>
