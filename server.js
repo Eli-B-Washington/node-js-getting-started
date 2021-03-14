@@ -4,7 +4,7 @@ const port = process.env.PORT || 5001;
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 //database connection
 const { Pool } = require('pg');
-const connectionString = process.env.DATABASE_URL || 'postgres://lkebzixqtzurfr:fe76c3e49349722290ab6932ca3a0f2067644eb572225fb977ddc5347d566fb1@ec2-54-159-175-113.compute-1.amazonaws.com:5432/d2bfq2b6bdhj2q?ssl=true';
+const connectionString = process.env.DATABASE_URL || "postgres://lkebzixqtzurfr:fe76c3e49349722290ab6932ca3a0f2067644eb572225fb977ddc5347d566fb1@ec2-54-159-175-113.compute-1.amazonaws.com:5432/d2bfq2b6bdhj2q?ssl=true";
 const pool = new Pool({connectionString: connectionString});
 
 const sql = "SELECT * FROM updates;"
@@ -18,7 +18,7 @@ pool.query(sql, function(err, res) {
 
     // Log this to the console for debugging purposes.
     console.log("Back from DB with result:");
-    //console.log(res.rows);
+    console.log(res.rows);
 }); 
 
 // views is directory for all template files
